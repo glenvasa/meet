@@ -73,7 +73,7 @@
       const getAccessToken = document.getElementById("getToken");
       const accessTokenElement = document.getElementById("accessToken");
       const getToken =
-        "https://zc2uat1685.execute-api.us-east-1.amazonaws.com/dev/api/token/{code}";
+        "https://zc2uat1685.execute-api.us-east-1.amazonaws.com/dev/api/token/";
 
       getAccessToken.onclick = function () {
         let code = codeValue.value;
@@ -94,7 +94,7 @@
 
       const getEvents = document.getElementById("getEvents");
       const events = document.getElementById("events");
-      const getCalendarEvents = "https://zc2uat1685.execute-api.us-east-1.amazonaws.com/dev/api/get-events/{access_token}";
+      const getCalendarEvents = "https://zc2uat1685.execute-api.us-east-1.amazonaws.com/dev/api/get-events/";
 
       getEvents.onclick = function () {
       const { access_token } = JSON.parse(accessTokenElement.innerText);
