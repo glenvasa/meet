@@ -73,6 +73,7 @@ module.exports.getAccessToken = async (event) => {
     // Get authorization code from the URL query
     const code = decodeURIComponent(`${event.pathParameters.code}`);
   
+  
     return new Promise((resolve, reject) => {
       /**
        *  Exchange authorization code for access token with a “callback” after the exchange,
@@ -88,6 +89,7 @@ module.exports.getAccessToken = async (event) => {
     })
       .then((token) => {
         // Respond with OAuth token
+        
         return {
           statusCode: 200,
           headers: {
@@ -96,7 +98,7 @@ module.exports.getAccessToken = async (event) => {
             // "Access-Control-Allow-Credentials": true,
             // "Access-Control-Allow-Methods": "OPTIONS, POST, GET"
           },
-          body: JSON.stringify(token),
+          body: JSON.stringify(token)
         };
       })
       .catch((err) => {
