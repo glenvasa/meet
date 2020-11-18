@@ -44,6 +44,7 @@
     <button id="getEvents">Get Events</button>
     <p id="events"></p>
     </main>
+
     <script type="text/javascript">
       // --------------------- STEP 1
       const getURLElement = document.getElementById("getURL");
@@ -88,7 +89,7 @@
             return response.json();
           })
           .then(function (json) {
-            accessTokenElement.innerText = JSON.stringify(json);
+            accessTokenElement.innerText = JSON.stringify(json.access_token);
           });
       };
 
