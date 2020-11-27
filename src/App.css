@@ -130,7 +130,8 @@ input[type="number"] {
 
 .Alert {
   position: fixed;
-  top: 20px;
+  margin-left: 35%;
+  margin-top: 45px;
 }
 
 .data-vis-wrapper {
