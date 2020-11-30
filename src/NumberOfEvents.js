@@ -15,11 +15,11 @@ class NumberOfEvents extends Component {
 
     if (value < 1) {
       this.setState({
-        numbText: "Please choose to view at least 1 event",
+        infoText: "Please choose a number of events between 1 and 32",
       });
     } else {
       this.setState({
-        numbText: "",
+        infoText: "",
       });
     }
   };
@@ -27,7 +27,7 @@ class NumberOfEvents extends Component {
   render() {
     return (
       <div className="number-of-events">
-        <ErrorAlert text={this.state.numbText} />
+        <ErrorAlert text={this.state.infoText} />
         <label className="number-of-events-label">Number of Events: </label>
         <input
           type="number"
