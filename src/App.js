@@ -5,6 +5,7 @@ import EventList from "./EventList";
 import CitySearch from "./CitySearch";
 import NumberOfEvents from "./NumberOfEvents";
 import { extractLocations, getEvents } from "./api";
+import { OfflineAlert } from "./Alert";
 
 class App extends Component {
   state = {
@@ -12,9 +13,18 @@ class App extends Component {
     locations: [],
     numberOfEvents: 32,
     currentLocation: "all",
+    alertText: "",
   };
 
   updateEvents = (location, eventCount) => {
+    if (!navigator.onLine) {
+      this.setState({
+        alertText:
+          "You are currently offline. Please connect to the internet for an update list of events",
+      });
+    } else {
+      this.setState({ alertText: "" });
+    }
     const { currentLocation, numberOfEvents } = this.state;
     if (location) {
       getEvents().then((events) => {
@@ -70,6 +80,7 @@ class App extends Component {
           numberOfEvents={this.state.numberOfEvents}
           updateEvents={this.updateEvents}
         />
+        <OfflineAlert text={this.state.alertText} />
         <EventList events={this.state.events} />
       </div>
     );
