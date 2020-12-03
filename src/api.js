@@ -1,4 +1,4 @@
-import Axios from "axios";
+import axios from "axios";
 import { mockData } from "./mock-data";
 import NProgress from "nprogress";
 
@@ -40,7 +40,7 @@ export const getEvents = async () => {
   if (token) {
     removeQuery();
     const url = `https://zc2uat1685.execute-api.us-east-1.amazonaws.com/dev/api/get-events/${token}`;
-    const result = await Axios.get(url);
+    const result = await axios.get(url);
     if (result.data) {
       let locations = extractLocations(result.data.events);
       localStorage.setItem("lastEvents", JSON.stringify(result.data));
@@ -59,7 +59,7 @@ export const getAccessToken = async () => {
     const searchParams = new URLSearchParams(window.location.search);
     const code = await searchParams.get("code");
     if (!code) {
-      const results = await Axios.get(
+      const results = await axios.get(
         "https://zc2uat1685.execute-api.us-east-1.amazonaws.com/dev/api/get-auth-url"
       );
       const { authUrl } = results.data;
