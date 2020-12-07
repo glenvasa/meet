@@ -4,11 +4,13 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 const EventGenre = ({ events }) => {
   const [data, setData] = useState([]);
 
+  let getData;
+
   useEffect(() => {
     setData(() => getData());
-  }, [events]);
+  }, [events, getData]);
 
-  const getData = () => {
+  getData = () => {
     const genres = ["React", "JavaScript", "Node", "jQuery", "AngularJS"];
     const data = genres.map((genre) => {
       const value = events.filter(({ summary }) =>
