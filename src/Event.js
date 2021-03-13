@@ -5,12 +5,18 @@ class Event extends Component {
     showDetails: false,
   };
 
-  handleShowDetails = () => {
+  handleShowDetails = (e) => {
     if (this.state.showDetails === false) {
       this.setState({ showDetails: true });
     } else {
       this.setState({ showDetails: false });
     }
+    let button = e.target;
+    let viewedEvent = button.parentElement.parentElement;
+    let eventHeight = viewedEvent.getBoundingClientRect().top;
+    setTimeout(()=> {
+      window.scrollTo(0, eventHeight);
+    })
   };
 
   render() {
@@ -36,7 +42,12 @@ class Event extends Component {
           </div>
 
           {!showDetails && (
-            <button className="details-btn" onClick={this.handleShowDetails}>
+            <button
+              className="details-btn"
+              onClick={(e) => {
+                this.handleShowDetails(e);
+              }}
+            >
               Show Details
             </button>
           )}
