@@ -1,7 +1,41 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+
+:root {
+  --Font-1: Acme;
+  --Font-2: RocknRoll One;
+}
+
+body {
+  background-image: url("bg1.jfif");
+  /* background-repeat: repeat; */
+  background-size: cover;
+}
+
 .App {
   text-align: center;
   padding: 2% 5%;
+}
+
+.App h1 {
+  font-family: var(--Font-1);
+  /* background:  */
+  font-size: 65px;
+  margin-bottom: 0;
+  margin-top: 0px;
+  background: linear-gradient(
+    90deg,
+    rgba(46, 39, 170, 1) 0%,
+    rgba(168, 41, 193, 1) 41%,
+    rgba(44, 74, 203, 1) 61%,
+    rgba(199, 26, 198, 1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* text-shadow: 1px 1px 1px white; */
 }
 
 .App * {
@@ -20,6 +54,7 @@ p {
 .display-none {
   display: none;
 }
+
 .showSuggestions {
   display: block;
 }
@@ -39,6 +74,7 @@ input[type="number"] {
 .city {
   width: 250px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .city-search {
@@ -51,7 +87,10 @@ input[type="number"] {
 }
 
 .city-search-instruction {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  margin-top: 0;
+  font-family: var(--Font-2);
+  font-size: 18px;
 }
 
 .suggestions {
@@ -60,7 +99,7 @@ input[type="number"] {
   z-index: 2;
   align-self: center;
   margin: 0;
-  top: 100px;
+  top: 83px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
@@ -88,24 +127,98 @@ input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(46, 39, 170, 1) 0%,
+    rgba(168, 41, 193, 1) 41%,
+    rgba(44, 74, 203, 1) 61%,
+    rgba(199, 26, 198, 1)
+  );
+  /* background: linear-gradient(90deg, rgba(99,92,223,1) 0%, rgba(168,41,193,1) 41%, rgba(94,120,227,1) 61%, rgba(199,26,198,1) 100%); */
+  margin-right: 30px;
+  box-shadow: 3px 2px 3px black;
 }
 
 .details-btn {
   position: absolute;
-  right: 5px;
+  left: 5px;
   bottom: 5px;
   padding: 5px 8px;
+  margin-top: 10px !important;
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  color: rgba(255, 255, 255, 0.85);
+  /* text-shadow: 2px 2px 2px white; */
+  background-color: rgba(0, 0, 0, 0.35);
+  box-shadow: 1px 1px 1px black;
+  transition: all .3s ease-in-out;
+}
+
+.details-btn:hover {
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.event-list-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.event-list {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 400px));
 }
 
 .event-heading {
   display: flex;
+  justify-content: space-between;
 }
+
+.event-link {
+  background-color: rgba(0, 0, 0, 0.35);
+  
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px black;
+  transition: all .3s ease-in-out;
+  /* font-family: var(--Font-2); */
+}
+
+
 
 .event-link a {
   text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.event-link:hover {
+transform: scaleX(1.05) scaleY(1.05);
+}
+
+
+
+.summary {
+  color: white;
+  text-shadow: 1px 1px 8px black;
+}
+
+.event-overview-info {
+  margin-bottom: 20px;
+}
+
+.location,
+.start-time {
+  color: white;
+  text-shadow: 1px 1px 8px black;
+}
+
+.event-details {
+  color: whitesmoke;
+  margin: 10px 0px 20px;
 }
 
 .name {
@@ -127,11 +240,18 @@ input[type="number"] {
   overflow-x: hidden;
 }
 
+.number-of-events-label {
+  /* font-family: var(--Font-2); */
+  font-size: 17px;
+  /* font-weight: bold; */
+  margin-bottom: 5px;
+}
+
 .number-of-events {
-  width: 200px;
+  width: 250px;
   margin: 20px auto;
   text-align: center;
-
+  margin-top: 5px;
 }
 
 /* .number-of-events-input {
@@ -140,7 +260,7 @@ input[type="number"] {
 
 .event-number {
   width: 60px;
-  margin-top: 5px;
+  margin-top: -15px;
   margin-bottom: 20px;
 }
 
@@ -156,7 +276,6 @@ input[type="number"] {
   /* position: fixed; */
   /* margin-left: 35%;
   margin-top: 45px; */
-
 }
 
 .data-vis-wrapper {
@@ -164,6 +283,18 @@ input[type="number"] {
   align-items: center;
   flex-direction: column;
 }
+
+.data-vis-wrapper h4 {
+  /* font-family: var(--Font-1); */
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.75);
+  width: 200px;
+  text-shadow: .5px .5px 1px white;
+  /* background: linear-gradient(90deg, rgba(46,39,170,1) 0%, rgba(168,41,193,1) 41%, rgba(44,74,203,1) 61%, rgba(199,26,198,1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
 .data-vis-wrapper .recharts-responsive-container {
   min-width: 100%;
   display: flex;
@@ -172,6 +303,18 @@ input[type="number"] {
   overflow: visible;
 }
 
+tspan {
+  /* font-family: var(--Font-2); */
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: .5px .5px 1px white;
+}
+
+.recharts-surface tspan {
+  color: black !important;
+  opacity: 1;
+}
+/* 
 .login-button {
   color: #494949;
   text-transform: uppercase;
@@ -222,7 +365,7 @@ input[type="number"] {
   font-size: 14px;
   letter-spacing: 0.2px;
   font-family: "Roboto";
-}
+} */
 
 @media only screen and (min-width: 992px) {
   .data-vis-wrapper {
