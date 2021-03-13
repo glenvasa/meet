@@ -13,10 +13,14 @@ class Event extends Component {
     }
     let button = e.target;
     let viewedEvent = button.parentElement.parentElement;
-    let eventHeight = viewedEvent.getBoundingClientRect().top;
-    setTimeout(()=> {
+    // console.log(viewedEvent.getBoundingClientRect());
+    // console.log(window.scrollY);
+    let eventHeight = viewedEvent.getBoundingClientRect().y;
+    console.log(eventHeight);
+
+    setTimeout(() => {
       window.scrollTo(0, eventHeight);
-    })
+    });
   };
 
   render() {
@@ -52,7 +56,12 @@ class Event extends Component {
             </button>
           )}
           {showDetails && (
-            <button className="details-btn" onClick={this.handleShowDetails}>
+            <button
+              className="details-btn"
+              onClick={(e) => {
+                this.handleShowDetails(e);
+              }}
+            >
               Hide Details
             </button>
           )}
