@@ -10,11 +10,11 @@
 }
 
 body {
-  /* background-image: url("bg7.jfif");
+  background-image: url("bg-11.png");
   background-repeat: no-repeat;
-  /* background-size: contain;  */
-  /* background-size: cover; */
-  background-color: whitesmoke;
+  background-size: contain; 
+ background-size: cover;
+  /* background-color: whitesmoke; */
 }
 
 .App {
@@ -288,7 +288,7 @@ input[type="number"] {
 .data-vis-wrapper h4 {
   /* font-family: var(--Font-1); */
   font-size: 18px;
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, .75);
   width: 200px;
   text-shadow: 0.5px 0.5px 1px white;
   margin-left: -100px;
@@ -322,9 +322,10 @@ input[type="number"] {
 
 tspan {
   /* font-family: var(--Font-2); */
+  color: black !important;
   font-weight: bold;
   font-size: 18px;
-  text-shadow: 0.5px 0.5px 1px white;
+  text-shadow: 0.3px 0.3px .2px black
 }
 
 .recharts-surface tspan {
