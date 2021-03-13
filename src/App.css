@@ -10,9 +10,11 @@
 }
 
 body {
-  background-image: url("bg1.jfif");
-  /* background-repeat: repeat; */
+  background-image: url("bg7.jfif");
+  background-repeat: no-repeat;
+  /* background-size: contain;  */
   background-size: cover;
+  
 }
 
 .App {
