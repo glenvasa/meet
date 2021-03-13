@@ -24,7 +24,7 @@ class CitySearch extends Component {
           infoText: "",
           query: ""
         })
-      }, 2000)
+      }, 3000)
       
     } else {
       return this.setState({
