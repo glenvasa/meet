@@ -13,7 +13,7 @@ body {
   /* background-image: url("bg7.jfif");
   background-repeat: no-repeat;
   /* background-size: contain;  */
-  /* background-size: cover; */ 
+  /* background-size: cover; */
   background-color: whitesmoke;
 }
 
@@ -163,15 +163,15 @@ input[type="number"] {
 }
 
 .event-list-container {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   margin-top: 40px;
 }
 
 .event-list {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 500px));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .event-heading {
@@ -288,6 +288,7 @@ input[type="number"] {
   color: rgba(0, 0, 0, 0.75);
   width: 200px;
   text-shadow: 0.5px 0.5px 1px white;
+  margin-left: -200px;
   /* background: linear-gradient(90deg, rgba(46,39,170,1) 0%, rgba(168,41,193,1) 41%, rgba(44,74,203,1) 61%, rgba(199,26,198,1));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
@@ -296,11 +297,21 @@ input[type="number"] {
 .data-vis-wrapper .recharts-responsive-container {
   min-width: 100%;
   display: flex;
+  margin-left: 100px;
 }
+
 .recharts-surface {
   overflow: visible;
-  margin-left: 60px;
+  /* margin-right: 100px !important; */
 }
+
+/* .recharts-wrapper {
+  margin-right: 100px;
+} */
+
+/* .recharts-layer.recharts-pie {
+  margin-left: 100px !important;
+} */
 
 tspan {
   /* font-family: var(--Font-2); */
