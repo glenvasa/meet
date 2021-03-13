@@ -24,20 +24,25 @@ class Event extends Component {
             {" "}
             <h2 className="summary">{event.summary}</h2>
             <button className="event-link">
-              <a href={event.htmlLink}>Attend this Event</a>
+              <a href={event.htmlLink} target="_blank">
+                Add to Calendar
+              </a>
             </button>
           </div>
+          <div className="event-overview-info">
+            {" "}
+            <p className="location">{event.location}</p>
+            <p className="start-time">{event.start.dateTime}</p>
+          </div>
 
-          <p className="location">{event.location}</p>
-          <p className="start-time">{event.start.dateTime}</p>
           {!showDetails && (
             <button className="details-btn" onClick={this.handleShowDetails}>
-              Show Event Details
+              Show Details
             </button>
           )}
           {showDetails && (
             <button className="details-btn" onClick={this.handleShowDetails}>
-              Hide Event Details
+              Hide Details
             </button>
           )}
         </div>
