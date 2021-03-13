@@ -95,6 +95,14 @@ input[type="number"] {
   cursor: pointer;
 }
 
+.event-heading {
+  display: flex;
+}
+
+.event-link a {
+  text-decoration: none;
+}
+
 .name {
   font-size: 18px;
   font-weight: 600;
