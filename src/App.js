@@ -23,7 +23,7 @@ class App extends Component {
     locations: [],
     numberOfEvents: 32,
     currentLocation: "all",
-    alertText: "",
+    alertText:  "",
   };
 
   updateEvents = (location, eventCount) => {
