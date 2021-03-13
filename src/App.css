@@ -171,7 +171,8 @@ input[type="number"] {
 .event-list {
   /* margin: 0 auto; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-row-gap: 20px;
 }
 
 .event-heading {
@@ -280,6 +281,8 @@ input[type="number"] {
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-around;
+  margin-left: 150px;
 }
 
 .data-vis-wrapper h4 {
@@ -288,7 +291,7 @@ input[type="number"] {
   color: rgba(0, 0, 0, 0.75);
   width: 200px;
   text-shadow: 0.5px 0.5px 1px white;
-  margin-left: -200px;
+  margin-left: -100px;
   /* background: linear-gradient(90deg, rgba(46,39,170,1) 0%, rgba(168,41,193,1) 41%, rgba(44,74,203,1) 61%, rgba(199,26,198,1));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
@@ -297,13 +300,17 @@ input[type="number"] {
 .data-vis-wrapper .recharts-responsive-container {
   min-width: 100%;
   display: flex;
-  margin-left: 100px;
+  /* margin-left: 100px; */
 }
 
-.recharts-surface {
+.recharts-surface:first-child {
   overflow: visible;
-  /* margin-right: 100px !important; */
+  /* margin-left: 10px !important; */
 }
+
+.recharts-surface:last-child {
+  margin-left: 100px !important;
+} 
 
 /* .recharts-wrapper {
   margin-right: 100px;
