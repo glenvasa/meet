@@ -17,6 +17,12 @@ class NumberOfEvents extends Component {
       this.setState({
         infoText: "Please choose a number of events between 1 and 32",
       });
+      setTimeout(() => {
+        this.setState({
+          infoText: "",
+          query: ""
+        })
+      }, 3000)
     } else {
       this.setState({
         infoText: "",
