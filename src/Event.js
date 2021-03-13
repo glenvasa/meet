@@ -20,7 +20,14 @@ class Event extends Component {
     return (
       <div className="event">
         <div className="event-overview">
-          <h2 className="summary">{event.summary}</h2>
+          <div className="event-heading">
+            {" "}
+            <h2 className="summary">{event.summary}</h2>
+            <button className="event-link">
+              <a href={event.htmlLink}>Attend this Event</a>
+            </button>
+          </div>
+
           <p className="location">{event.location}</p>
           <p className="start-time">{event.start.dateTime}</p>
           {!showDetails && (
