@@ -10,11 +10,11 @@
 }
 
 body {
-  background-image: url("bg7.jfif");
+  /* background-image: url("bg7.jfif");
   background-repeat: no-repeat;
   /* background-size: contain;  */
-  background-size: cover;
-  
+  /* background-size: cover; */ 
+  background-color: whitesmoke;
 }
 
 .App {
@@ -154,7 +154,7 @@ input[type="number"] {
   /* text-shadow: 2px 2px 2px white; */
   background-color: rgba(0, 0, 0, 0.35);
   box-shadow: 1px 1px 1px black;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .details-btn:hover {
@@ -171,7 +171,7 @@ input[type="number"] {
 .event-list {
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, minmax(200px, 400px));
+  grid-template-columns: repeat(3, minmax(200px, 500px));
 }
 
 .event-heading {
@@ -181,16 +181,14 @@ input[type="number"] {
 
 .event-link {
   background-color: rgba(0, 0, 0, 0.35);
-  
+
   width: 80px;
   height: 40px;
   border-radius: 5px;
   box-shadow: 1px 1px 1px black;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   /* font-family: var(--Font-2); */
 }
-
-
 
 .event-link a {
   text-decoration: none;
@@ -198,10 +196,8 @@ input[type="number"] {
 }
 
 .event-link:hover {
-transform: scaleX(1.05) scaleY(1.05);
+  transform: scaleX(1.05) scaleY(1.05);
 }
-
-
 
 .summary {
   color: white;
@@ -291,7 +287,7 @@ transform: scaleX(1.05) scaleY(1.05);
   font-size: 18px;
   color: rgba(0, 0, 0, 0.75);
   width: 200px;
-  text-shadow: .5px .5px 1px white;
+  text-shadow: 0.5px 0.5px 1px white;
   /* background: linear-gradient(90deg, rgba(46,39,170,1) 0%, rgba(168,41,193,1) 41%, rgba(44,74,203,1) 61%, rgba(199,26,198,1));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
@@ -303,13 +299,14 @@ transform: scaleX(1.05) scaleY(1.05);
 }
 .recharts-surface {
   overflow: visible;
+  margin-left: 60px;
 }
 
 tspan {
   /* font-family: var(--Font-2); */
   font-weight: bold;
   font-size: 18px;
-  text-shadow: .5px .5px 1px white;
+  text-shadow: 0.5px 0.5px 1px white;
 }
 
 .recharts-surface tspan {
