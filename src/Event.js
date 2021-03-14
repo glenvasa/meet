@@ -11,15 +11,14 @@ class Event extends Component {
     } else {
       this.setState({ showDetails: false });
     }
+
     let button = e.target;
     let viewedEvent = button.parentElement.parentElement;
-    // console.log(viewedEvent.getBoundingClientRect());
-    // console.log(window.scrollY);
-    let eventHeight = viewedEvent.getBoundingClientRect().y;
-    console.log(eventHeight);
+    let eventHeight = viewedEvent.getBoundingClientRect().top;
+    let scrollHeight = eventHeight + window.scrollY;
 
     setTimeout(() => {
-      window.scrollTo(0, eventHeight);
+      window.scrollTo(0, scrollHeight);
     });
   };
 
