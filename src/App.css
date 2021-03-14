@@ -9,6 +9,10 @@
   --Font-2: RocknRoll One;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url("bg-11.png");
   background-repeat: no-repeat;
@@ -93,6 +97,10 @@ input[type="number"] {
   margin-top: 0;
   font-family: var(--Font-2);
   font-size: 18px;
+}
+
+.event {
+  transition: all 0.3s ease-in;
 }
 
 .event-list li {
