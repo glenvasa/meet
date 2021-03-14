@@ -97,7 +97,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Meet-Us</h1>
+        <h1>Tech Connect</h1>
         <OfflineAlert text={this.state.alertText} />
         <CitySearch
           locations={this.state.locations}
