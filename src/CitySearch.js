@@ -50,7 +50,7 @@ class CitySearch extends Component {
     return (
       <div className="city-search">
         <InfoAlert text={this.state.infoText} />
-        <h2 className="city-search-instruction">Choose your closest city</h2>
+        <h2 className="city-search-instruction">Choose Your Closest City</h2>
         <input
           type="text"
           className="city"
@@ -59,7 +59,7 @@ class CitySearch extends Component {
           onFocus={() => {
             this.setState({ showSuggestions: true });
           }}
-          placeholder="Search for a City"
+          placeholder="search for a city..."
         />
         <ul
           className="suggestions"
