@@ -23,9 +23,9 @@ body {
 }
 
 .App h1 {
-  font-family: var(--Font-2);
+  font-family: var(--Font-1);
   /* background:  */
-  font-size: 40px;
+  font-size: 50px;
   margin-bottom: 20px;
   margin-top: 0px;
   background: linear-gradient(
