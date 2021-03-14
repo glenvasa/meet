@@ -22,6 +22,8 @@ class Event extends Component {
     });
   };
 
+  
+
   render() {
     const showDetails = this.state.showDetails;
     const { event } = this.props;
@@ -57,8 +59,8 @@ class Event extends Component {
           {showDetails && (
             <button
               className="details-btn"
-              onClick={(e) => {
-                this.handleShowDetails(e);
+              onClick={() => {
+                this.setState({ showDetails: false });
               }}
             >
               Hide Details
