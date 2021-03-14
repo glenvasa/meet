@@ -186,14 +186,14 @@ input[type="number"] {
 
 .event-logo {
   position: absolute;
-  top: 1%;
-  left: 2%;
+  top: 5px;
+  left: 10px;
   width: 30px;
 }
 
 .node-logo {
-  top: 0%;
-  left: 1%;
+  top: 2px;
+  left: 2px;
 }
 
 .event-link {
@@ -217,7 +217,7 @@ input[type="number"] {
 }
 
 .summary {
-  margin-top: 7%;
+  margin-top: 30px;
   color: white;
   text-shadow: 1px 1px 8px black;
 }
