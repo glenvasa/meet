@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Logo from "./Logo";
 
 class Event extends Component {
   state = {
@@ -11,7 +12,9 @@ class Event extends Component {
     } else {
       this.setState({ showDetails: false });
     }
-
+    //  when "show details" button clicked to open card and display details, we want the window
+    //  to auto scroll down to display all details. We don't want user to have to manually scroll down
+    // to view what they just opened.
     let button = e.target;
     let viewedEvent = button.parentElement.parentElement;
     let eventHeight = viewedEvent.getBoundingClientRect().top;
@@ -21,8 +24,6 @@ class Event extends Component {
       window.scrollTo(0, scrollHeight);
     });
   };
-
-  
 
   render() {
     const showDetails = this.state.showDetails;
@@ -34,6 +35,7 @@ class Event extends Component {
           <div className="event-heading">
             {" "}
             <h2 className="summary">{event.summary}</h2>
+            <Logo name={event.summary} />
             <button className="event-link">
               <a href={event.htmlLink} target="_blank">
                 Add to Calendar
