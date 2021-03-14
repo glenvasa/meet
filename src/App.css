@@ -122,7 +122,7 @@ input[type="number"] {
   background-color: #bcdcdb;
 }
 
-.event {
+li {
   padding: 10px 10px 35px;
   margin-bottom: 10px;
   text-align: left;
@@ -139,6 +139,10 @@ input[type="number"] {
   /* background: linear-gradient(90deg, rgba(99,92,223,1) 0%, rgba(168,41,193,1) 41%, rgba(94,120,227,1) 61%, rgba(199,26,198,1) 100%); */
   margin-right: 30px;
   box-shadow: 3px 2px 3px black;
+}
+
+li:nth-child(even){
+  background: rgba(44, 74, 203, 1);
 }
 
 .details-btn {
