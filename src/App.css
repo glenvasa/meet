@@ -14,11 +14,12 @@ html {
 }
 
 body {
-  background-image: url("bg-11.png");
+  /* background-image: url("bg-11.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-size: cover;
-  /* background-color: whitesmoke; */
+  background-size: cover; */
+  background-color: #fffdd0;
+  /* background-color: #fff1d0; */
 }
 
 .App {
@@ -32,16 +33,17 @@ body {
   font-size: 50px;
   margin-bottom: 20px;
   margin-top: 0px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(46, 39, 170, 1) 0%,
     rgba(168, 41, 193, 1) 41%,
     rgba(44, 74, 203, 1) 61%,
     rgba(199, 26, 198, 1)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* text-shadow: 1px 1px 1px white; */
+  ); */
+  color: rgba(0, 0, 0, 0.75);
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  text-shadow: 4px 4px 4px rgba(46, 39, 170, 0.75);
 }
 
 .App * {
@@ -81,6 +83,7 @@ input[type="number"] {
   width: 250px;
   text-align: center;
   margin-bottom: 10px;
+  box-shadow: 1px 1px 1px 1px black;
 }
 
 .city-search {
@@ -290,6 +293,7 @@ input[type="number"] {
   width: 60px;
   margin-top: -15px;
   margin-bottom: 20px;
+  box-shadow: 1px 1px 1px 1px black;
 }
 
 .button-wrapper {
@@ -317,7 +321,7 @@ input[type="number"] {
 .data-vis-wrapper h4 {
   /* font-family: var(--Font-1); */
   font-size: 18px;
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 1);
   width: 200px;
   text-shadow: 0.5px 0.5px 1px white;
   margin-left: -100px;
