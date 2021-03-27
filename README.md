@@ -9,7 +9,7 @@
 <img src="public/Screenshot (241).png">
 
 ## Features
-- Sign in with Google to grant permission for app access to Google Calendar.
+- Sign in with Google OAuth2 and grant permission for app access to Google Calendar.
 - Filter tech related events by city.
 - Specify the number of events to display.
 - Show/hide event details.
