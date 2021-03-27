@@ -1,4 +1,4 @@
-# Meet-Us Application
+# Tech Connect Application
 
 - Serverless, progressive web application (PWA) built with React using a test-driven development (TDD) technique.
 - Uses AWS Lambda to host serverless functions and Google Calendar API to fetch upcoming events.
@@ -9,7 +9,7 @@
 <img src="public/Events-Details.png">
 
 ## Features
-- Filter events by city.
+- Filter tech related events by city.
 - Specify the number of events to display.
 - Show/hide event details.
 - Access the app while offline through a Service Worker API.
