@@ -5,10 +5,11 @@
 
 ## Screenshots
 
-<img src="public/Main-Screen.png">
-<img src="public/Events-Details.png">
+<img src="public/Screenshot (237).png">
+<img src="public/Screenshot (241).png">
 
 ## Features
+- Sign in with Google to grant permission for app access to Google Calendar.
 - Filter tech related events by city.
 - Specify the number of events to display.
 - Show/hide event details.
